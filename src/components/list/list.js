@@ -1,14 +1,17 @@
 import React from "react";
 
 import Title from "../title/title";
-import Data from "./list.json";
+
 
 export default class List extends React.Component{
 
+
+
     render(){
+        var orgData = this.props.listData;
         var list = [];
-        for(let i = 0; i < Data.list.length; i++){
-            const obj = Data.list[i];
+        for(let i = 0; i < orgData.length; i++){
+            const obj = orgData[i];
             list.push(obj.product + " " + obj.quantity + " " + obj.measurement);
         }
 
@@ -19,8 +22,12 @@ export default class List extends React.Component{
         return (
             <div>
                 <Title title={"Bar Stock"}/>
-                <ul> {finalList} </ul>
+                {finalList}
             </div>
         );
     }
 }
+
+
+
+

@@ -18,8 +18,15 @@ export default class Card extends React.Component{
             })
         })
 
-        var finalCard = items.map(function(items){
-            return <ul> {items} </ul>;
+        var finalCard = items.map(function(item){
+            console.dir(items);
+            return (
+
+                    <tr>
+                        <td> {items} </td>
+                    </tr>
+
+            );
         })
 
         return (
@@ -27,9 +34,7 @@ export default class Card extends React.Component{
                 <Title title={"Orders"}/>
                 <table>
                     <tbody>
-                        <tr>
-                           <td> {finalCard} </td>
-                        </tr>
+                {finalCard}
                     </tbody>
 
                 </table>
