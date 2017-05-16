@@ -1,0 +1,99 @@
+{
+  "card" : [
+    {
+      "Bloody Mary" : [
+        {
+          "product" : "Vodka",
+          "quantity" : "2",
+          "measurement" : "oz"
+        },
+        {
+          "product" : "Bloody Mary Mix",
+          "quantity" : "4",
+          "measurement" : "oz"
+        },
+        {
+          "product" : "Celery Stalk",
+          "quantity" : "1",
+          "measurement" : ""
+        }
+      ]
+    },
+    {
+      "Martini" : [
+        {
+          "product" : "Gin",
+          "quantity" : "2",
+          "measurement" : "oz"
+        },
+        {
+          "product" : "Dry Vermouth",
+          "quantity" : "1",
+          "measurement" : "oz"
+        },
+        {
+          "product" : "Olive",
+          "quantity" : "1",
+          "measurement" : ""
+        }
+      ]
+    },
+    {
+      "Margarita" : [
+        {
+          "product" : "Tequila",
+          "quantity" : "2",
+          "measurement" : "oz"
+        },
+        {
+          "product" : "Orange Juice",
+          "quantity" : "1",
+          "measurement" : "oz"
+        },
+        {
+          "product" : "Agave Nectar",
+          "quantity" : "1",
+          "measurement" : "oz"
+        },
+        {
+          "product" : "Lime",
+          "quantity" : "1",
+          "measurement" : ""
+        }
+      ]
+    },
+    {
+      "Screwdriver" : [
+        {
+          "product" : "Vodka",
+          "quantity" : "2",
+          "measurement" : "oz"
+        },
+        {
+          "product" : "Orange Juice",
+          "quantity" : "4",
+          "measurement" : "oz"
+        }
+      ]
+    },
+    {
+      "Manhattan" : [
+        {
+          "product" : "Whiskey",
+          "quantity" : "2",
+          "measurement" : "oz"
+        },
+        {
+          "product" : "Sweet Vermouth",
+          "quantity" : "1",
+          "measurement" : "oz"
+        },
+        {
+          "product" : "Cherry",
+          "quantity" : "1",
+          "measurement" : ""
+        }
+      ]
+    }
+  ]
+}

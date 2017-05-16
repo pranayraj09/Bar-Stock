@@ -1,0 +1,68 @@
+{
+  "list": [
+    {
+      "product": "Vodka",
+      "quantity": "750",
+      "measurement": "ML"
+    },
+    {
+      "product": "Gin",
+      "quantity": "1.5",
+      "measurement": "L"
+    },
+    {
+      "product": "Tequila",
+      "quantity": "750",
+      "measurement": "ML"
+    },
+    {
+      "product": "Whiskey",
+      "quantity": "750",
+      "measurement": "ML"
+    },
+    {
+      "product": "Sweet Vermouth",
+      "quantity": "750",
+      "measurement": "ML"
+    },
+    {
+      "product": "Dry Vermouth",
+      "quantity": "750",
+      "measurement": "ML"
+    },
+    {
+      "product": "Bloody Mary Mix",
+      "quantity": "2",
+      "measurement": "L"
+    },
+    {
+      "product": "Agave Nectar",
+      "quantity": "24",
+      "measurement": "oz"
+    },
+    {
+      "product": "Orange Juice",
+      "quantity": "oz"
+    },
+    {
+      "product": "Limes",
+      "quantity": "36",
+      "measurement": ""
+    },
+    {
+      "product": "Cherries",
+      "quantity": "9",
+      "measurement": ""
+    },
+    {
+      "product": "Celery Stalks",
+      "quantity": "16",
+      "measurement": ""
+    },
+    {
+      "product": "Olives",
+      "quantity": "24",
+      "measurement": ""
+    }
+  ]
+}
