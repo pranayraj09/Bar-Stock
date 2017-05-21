@@ -42,7 +42,8 @@
     },
     {
       "product": "Orange Juice",
-      "quantity": "oz"
+      "quantity": "2",
+      "measurement": "oz"
     },
     {
       "product": "Limes",

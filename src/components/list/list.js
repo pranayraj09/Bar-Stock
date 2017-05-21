@@ -1,23 +1,26 @@
 import React from "react";
 
 import Title from "../title/title";
+import Data from "./list.json";
 
 
 export default class List extends React.Component{
 
-
-
     render(){
-        var orgData = this.props.listData;
-        var list = [];
+
+        let orgData = Data.list;
+        console.log(orgData)
+        let list = [];
         for(let i = 0; i < orgData.length; i++){
             const obj = orgData[i];
             list.push(obj.product + " " + obj.quantity + " " + obj.measurement);
         }
 
         var finalList = list.map(function(items){
-            return <ul> {items} </ul>;
+            return <li> {items} </li>;
         })
+
+
 
         return (
             <div>
