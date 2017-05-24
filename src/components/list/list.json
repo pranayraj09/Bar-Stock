@@ -7,7 +7,7 @@
     },
     {
       "product": "Gin",
-      "quantity": "1.5",
+      "quantity": "15",
       "measurement": "L"
     },
     {
@@ -32,7 +32,7 @@
     },
     {
       "product": "Bloody Mary Mix",
-      "quantity": "2",
+      "quantity": "20",
       "measurement": "L"
     },
     {
@@ -42,26 +42,26 @@
     },
     {
       "product": "Orange Juice",
-      "quantity": "2",
+      "quantity": "20",
       "measurement": "oz"
     },
     {
-      "product": "Limes",
+      "product": "Lime",
       "quantity": "36",
       "measurement": ""
     },
     {
-      "product": "Cherries",
-      "quantity": "9",
+      "product": "Cherry",
+      "quantity": "29",
       "measurement": ""
     },
     {
-      "product": "Celery Stalks",
+      "product": "Celery Stalk",
       "quantity": "16",
       "measurement": ""
     },
     {
-      "product": "Olives",
+      "product": "Olive",
       "quantity": "24",
       "measurement": ""
     }

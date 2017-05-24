@@ -1,31 +1,41 @@
 import React from "react";
 
 import Title from "../title/title";
-import Data from "./list.json";
+
+import "./list.css";
 
 
 export default class List extends React.Component{
 
+    constructor(props){
+        super(props);
+    }
+
     render(){
-
-        let orgData = Data.list;
-        console.log(orgData)
-        let list = [];
-        for(let i = 0; i < orgData.length; i++){
-            const obj = orgData[i];
-            list.push(obj.product + " " + obj.quantity + " " + obj.measurement);
-        }
-
-        var finalList = list.map(function(items){
-            return <li> {items} </li>;
+        var finalList = this.props.ingredient.map(function(item){
+            return (
+                <li className="stock-ings">
+                    <span className="prod-name">
+                        {item.product}
+                    </span>
+                    <span className="prod-units">
+                        <span className="prod-qty">
+                            {item.quantity}
+                        </span>
+                        <span className="measurement-qty">
+                            &nbsp; {item.measurement}
+                        </span>
+                    </span>
+                </li>
+            )
         })
-
-
 
         return (
             <div>
                 <Title title={"Bar Stock"}/>
-                {finalList}
+                <ul className="container-fluid ingredient-list">
+                    {finalList}
+                </ul>
             </div>
         );
     }

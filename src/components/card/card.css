@@ -18,7 +18,7 @@
 }
 
 div{
-    font-family: "Lucida Grande";
+    font-family: "Helvetica Neue";
 }
 
 .items{
@@ -27,6 +27,8 @@ div{
 .items .menu-item{
     display:inline-block;
     float:none;
+    max-width: 230px;
+    padding-bottom: 25px;
 }
 
 .product{
@@ -44,16 +46,20 @@ button{
     border-color: transparent;
 }
 
+button:focus {
+    outline:0;
+}
+
+
 .glyphicon-plus{
     color: green;
-    padding: 0px 30px;
+    /*padding: 0px 30px;*/
     font-size: xx-large;
 }
 
 .glyphicon-minus{
     color: red;
     font-size: xx-large;
-    text-align: left;
     padding-left: 0px;
 }
 
@@ -61,8 +67,16 @@ button{
     padding: 20px 0px;
 }
 
+.quantity-box{
+    padding: 3px 7px;
+}
+
 .form-control{
     text-align: center;
+    padding: 0px;
+    height:40px;
+    max-width: 47.6px;
+    /*width:40px;*/
 }
 
 .ings{

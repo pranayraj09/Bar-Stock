@@ -1,0 +1,82 @@
+div{
+    color: #706F74;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px){
+    ul.ingredient-list {
+        list-style: none;
+        color: #fff;
+        -moz-column-count: 4;
+        -moz-column-gap: 20px;
+        -webkit-column-count: 4;
+        -webkit-column-gap: 20px;
+        column-count: 1;
+        column-gap: 20px;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px){
+    ul.ingredient-list {
+        list-style: none;
+        color: #fff;
+        -moz-column-count: 4;
+        -moz-column-gap: 20px;
+        -webkit-column-count: 4;
+        -webkit-column-gap: 20px;
+        column-count: 2;
+        column-gap: 20px;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+    ul.ingredient-list {
+        list-style: none;
+        color: #fff;
+        -moz-column-count: 4;
+        -moz-column-gap: 20px;
+        -webkit-column-count: 4;
+        -webkit-column-gap: 20px;
+        column-count: 3;
+        column-gap: 20px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    ul.ingredient-list {
+        list-style: none;
+        color: #fff;
+        -moz-column-count: 4;
+        -moz-column-gap: 20px;
+        -webkit-column-count: 4;
+        -webkit-column-gap: 20px;
+        column-count: 4;
+        column-gap: 20px;
+        max-width: 85%;
+    }
+}
+
+.stock-ings{
+    font-size: large;
+    padding-top: 10px;
+    max-width: 200px;
+    min-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.stock-ings .prod-name{
+    color: #9688A0;
+}
+
+.stock-ings .measurement-qty{
+    font-size: small;
+    color: #706F74;
+}
+
+.stock-ings .prod-qty{
+    color: #e6e9ef;
+}
+
+.prod-units{
+    float: right;
+}
