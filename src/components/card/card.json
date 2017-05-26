@@ -70,6 +70,11 @@
           "measurement" : "oz"
         },
         {
+          "product" : "Scotch",
+          "quantity" : "3",
+          "measurement" : "oz"
+        },
+        {
           "product" : "Orange Juice",
           "quantity" : "4",
           "measurement" : "oz"

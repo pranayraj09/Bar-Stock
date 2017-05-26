@@ -24,7 +24,7 @@ export default class Layout extends React.Component{
         }
         this.changeQty = this.changeQty.bind(this);
         this.getIndex = this.getIndex.bind(this);
-
+        this.validateQty = this.validateQty.bind(this);
     }
 
     getIndex(value, arr, prop) {
@@ -36,41 +36,56 @@ export default class Layout extends React.Component{
         return -1; //to handle the case where the value doesn't exist
     }
 
-    changeQty(prod, action, ingredient){
-        // console.log(this.state.ingredient);
+    validateQty(ingredient){
         let ingredientObject = this.state.ingredient;
+        let validate = 0;
         ingredient.map((item) => {
             let index = this.getIndex(item.product, ingredientObject, 'product');
             let obj = ingredientObject[index];
-            let newQty = obj.quantity;
-            if(obj.quantity < item.quantity){
-                alert("Stock is not available");
-            }else {
-                newQty = ((obj.quantity) - (item.quantity));
+            if(parseInt(obj.quantity) >= parseInt(item.quantity)){
+                validate++;
             }
-            let newItemObj = update(obj, {'quantity':{$set:newQty}});
-            ingredientObject = update(ingredientObject, {[index]:{$set:newItemObj}});
         })
-        this.setState({
-            ingredient:ingredientObject
-        });
+        return validate;
+    }
+
+    changeQty(prod, action, ingredient){
+        let availableQty = this.validateQty(ingredient);
+        // console.log(availableQty);
+        // console.log( ingredient.length);
+        if(availableQty < ingredient.length){
+            alert("Stock not available")
+        }else {
+            let ingredientObject = this.state.ingredient;
+            ingredient.map((item) => {
+                let index = this.getIndex(item.product, ingredientObject, 'product');
+                let obj = ingredientObject[index];
+                // let newQty = obj.quantity;
+                let newQty = ((obj.quantity) - (item.quantity));
+                let newItemObj = update(obj, {'quantity': {$set: newQty}});
+                ingredientObject = update(ingredientObject, {[index]: {$set: newItemObj}});
+            })
+            this.setState({
+                ingredient: ingredientObject
+            });
 
 
-        let obj = {};
-        let value = (typeof this.state.quantity[prod] !== 'undefined')?this.state.quantity[prod]:0;
-        switch(action){
-            case "increase":
-                obj[prod] = value+1;
-                this.setState({
-                    quantity:update(this.state.quantity,{$merge:obj})
-                });
-                break;
-            case "decrease":
-                obj[prod] = (value <= 0)?0:value-1;
-                this.setState({
-                    quantity:update(this.state.quantity,{$merge:obj})
-                });
-                break;
+            let obj = {};
+            let value = (typeof this.state.quantity[prod] !== 'undefined') ? this.state.quantity[prod] : 0;
+            switch (action) {
+                case "increase":
+                    obj[prod] = value + 1;
+                    this.setState({
+                        quantity: update(this.state.quantity, {$merge: obj})
+                    });
+                    break;
+                case "decrease":
+                    obj[prod] = (value <= 0) ? 0 : value - 1;
+                    this.setState({
+                        quantity: update(this.state.quantity, {$merge: obj})
+                    });
+                    break;
+            }
         }
     }
 

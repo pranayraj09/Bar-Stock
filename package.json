@@ -2,6 +2,7 @@
   "name": "barstock",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://pranayraj.com/apps/barstock/",
   "dependencies": {
     "bootstrap": "^3.3.7",
     "json-loader": "^0.5.4",
