@@ -24,7 +24,7 @@ export default class Card extends React.Component{
                                     Object.keys(elm).map((key) => {
                                         let ingredients = elm[key];
                                         return (
-                                                <div className="ingredients row">
+                                                <div key={key} className="ingredients row">
                                                     <div className="quantity col-lg-1 col-md-1 col-sm-1 col-xs-1"> {ingredients.quantity}</div>
                                                     <div className="measurement col-lg-2  col-md-2 col-sm-2 col-xs-2"> {ingredients.measurement}</div>
                                                     <div className="product col-lg-7 col-md-7 col-sm-7 col-xs-7"> {ingredients.product}</div>

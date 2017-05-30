@@ -12,19 +12,16 @@ export default class Layout extends React.Component{
 
     constructor(props){
         super(props);
-        // let ingredientList = {};
-        // ingList.list.map((item) => {
-        //     ingredientList[item.product] = item;
-        // });
-        // console.log(ingredientList);
+        let cartItems = JSON.parse(localStorage.getItem("cartItems"));
         this.state = {
             ingredient: ingList.list,
             products: productList.card,
-            quantity: {}
+            quantity: (cartItems)?cartItems:{}
         }
         this.changeQty = this.changeQty.bind(this);
         this.getIndex = this.getIndex.bind(this);
         this.validateQty = this.validateQty.bind(this);
+        this.updateCartItems = this.updateCartItems.bind(this);
     }
 
     getIndex(value, arr, prop) {
@@ -89,13 +86,25 @@ export default class Layout extends React.Component{
         }
     }
 
+    placeOrder(){
+      let items = JSON.stringify(this.state.quantity);
+      localStorage.setItem("cartItems", items);
+      this.props.history.push('/cart')
+    }
+
     render(){
-        // console.log(this.state.ingredient);
         return(
             <div>
-                <List ingredient={this.state.ingredient}/>
+                <List
+                  ingredient={this.state.ingredient}
+                  cartItems={this.state.quantity}
+                  products={this.state.products}
+                  getIndex={this.getIndex}
+                  updateCartItems={this.updateCartItems}/>
                 <hr></hr>
                 <Card products={this.state.products} quantity={this.state.quantity} changeQty={this.changeQty}/>
+                <br/>
+                <button className="btn btn-default btn-lg" onClick={() => this.placeOrder()}>Place Order</button>
             </div>
         )
     }
