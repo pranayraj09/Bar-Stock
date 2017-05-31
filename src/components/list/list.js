@@ -18,15 +18,17 @@ export default class List extends React.Component{
     componentWillMount(){
       let cartItems = this.props.cartItems;
       let updatedQty = null;
-      Object.keys(cartItems).forEach(function(key, value){
-        let index = this.getProductIndex(key, this.props.products);
-        let product = this.props.products[index];
-        updatedQty = this.getLeftQty(product, cartItems[key], ((updatedQty)?updatedQty:this.state.ingredient));
-      }.bind(this));
-      this.setState({
-          ingredient: updatedQty
-      });
-      this.props.updateCartItems(updatedQty);
+      if(Object.keys(cartItems).length !== 0) {
+          Object.keys(cartItems).forEach(function (key, value) {
+              let index = this.getProductIndex(key, this.props.products);
+              let product = this.props.products[index];
+              updatedQty = this.getLeftQty(product, cartItems[key], ((updatedQty) ? updatedQty : this.state.ingredient));
+          }.bind(this));
+          this.setState({
+              ingredient: updatedQty
+          });
+          this.props.updateCartItems(updatedQty);
+      }
     }
 
     componentWillReceiveProps(){
