@@ -7,7 +7,6 @@ import List from "./list/list";
 import Card from "./card/card";
 import update from 'immutability-helper';
 
-
 export default class Layout extends React.Component{
 
     constructor(props){
@@ -16,12 +15,25 @@ export default class Layout extends React.Component{
         this.state = {
             ingredient: ingList.list,
             products: productList.card,
-            quantity: (cartItems)?cartItems:{}
+            quantity: cartItems
         }
         this.changeQty = this.changeQty.bind(this);
         this.getIndex = this.getIndex.bind(this);
         this.validateQty = this.validateQty.bind(this);
         this.updateCartItems = this.updateCartItems.bind(this);
+
+        let totalItem = {};
+        this.state.products.map(function(item){
+            Object.keys(item).map((v) => {
+                totalItem[v] = 0;
+            })
+        });
+        localStorage.setItem("cartItems",JSON.stringify(totalItem));
+
+    }
+
+    updateCartItems(updated){
+        // console.log(updated)
     }
 
     getIndex(value, arr, prop) {
@@ -104,7 +116,9 @@ export default class Layout extends React.Component{
                 <hr></hr>
                 <Card products={this.state.products} quantity={this.state.quantity} changeQty={this.changeQty}/>
                 <br/>
-                <button className="btn btn-default btn-lg" onClick={() => this.placeOrder()}>Place Order</button>
+                <div className="button">
+                    <button className="btn btn-lg" onClick={() => this.placeOrder()}>Place Order</button>
+                </div>
             </div>
         )
     }

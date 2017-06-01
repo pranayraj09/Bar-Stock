@@ -1,0 +1,45 @@
+.summary-item{
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.summary-quantity{
+    color: white;
+}
+
+.summary-name{
+    color: #9688A0;
+}
+
+.line{
+    width: 300px
+}
+
+.total{
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.button{
+    text-align: center;
+}
+
+.btn {
+    background-color: #995AAF;
+    color: white;
+    border: 0px;
+    outline: none !important;
+}
+
+.btn:hover{
+    color: white;
+    outline: none !important;
+}
+
+.btn:active{
+    color: white;
+    outline: none !important;
+}
+
