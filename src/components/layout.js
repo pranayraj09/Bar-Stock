@@ -101,7 +101,7 @@ export default class Layout extends React.Component{
     placeOrder(){
       let items = JSON.stringify(this.state.quantity);
       localStorage.setItem("cartItems", items);
-      this.props.history.push('/cart')
+      this.props.history.push('cart')
     }
 
     render(){
