@@ -33,7 +33,7 @@ export default class Layout extends React.Component{
     }
 
     updateCartItems(updated){
-        console.log(updated)
+        // console.log(updated)
     }
 
     getIndex(value, arr, prop) {
