@@ -2,7 +2,7 @@
   "name": "barstock",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://cipherm.github.io/Bar-Stock/",
+  "homepage": "https://pranayraj09.github.io/Bar-Stock/",
   "dependencies": {
     "bootstrap": "^3.3.7",
     "immutability-helper": "^2.2.2",
